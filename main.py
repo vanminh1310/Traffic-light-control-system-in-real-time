@@ -11,18 +11,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        MainWindow.setLayoutDirection(QtCore.Qt.RightToLeft)
-        MainWindow.setAutoFillBackground(False)
-        MainWindow.setStyleSheet("background-color: rgb(170, 255, 255);\n"
+class Ui_TrafficLightControl(object):
+    def setupUi(self, TrafficLightControl):
+        TrafficLightControl.setObjectName("TrafficLightControl")
+        TrafficLightControl.resize(800, 600)
+        TrafficLightControl.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        TrafficLightControl.setLayoutDirection(QtCore.Qt.RightToLeft)
+        TrafficLightControl.setAutoFillBackground(False)
+        TrafficLightControl.setStyleSheet("background-color: rgb(170, 255, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "")
-        MainWindow.setIconSize(QtCore.QSize(32, 30))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        TrafficLightControl.setIconSize(QtCore.QSize(32, 30))
+        self.centralwidget = QtWidgets.QWidget(TrafficLightControl)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(0, 0, 791, 101))
@@ -62,35 +62,35 @@ class Ui_MainWindow(object):
         self.pushButton_3.setGeometry(QtCore.QRect(330, 340, 131, 41))
         self.pushButton_3.setStyleSheet("background-color: rgb(85, 255, 255);")
         self.pushButton_3.setObjectName("pushButton_3")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        TrafficLightControl.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(TrafficLightControl)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        TrafficLightControl.setStatusBar(self.statusbar)
+        self.toolBar = QtWidgets.QToolBar(TrafficLightControl)
         self.toolBar.setObjectName("toolBar")
-        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        TrafficLightControl.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        MainWindow.setTabOrder(self.pushButton, self.pushButton_2)
-        MainWindow.setTabOrder(self.pushButton_2, self.pushButton_3)
+        self.retranslateUi(TrafficLightControl)
+        QtCore.QMetaObject.connectSlotsByName(TrafficLightControl)
+        TrafficLightControl.setTabOrder(self.pushButton, self.pushButton_2)
+        TrafficLightControl.setTabOrder(self.pushButton_2, self.pushButton_3)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, TrafficLightControl):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Traffic light control system in real time"))
-        self.label_2.setText(_translate("MainWindow", "ITS-59"))
-        self.pushButton.setText(_translate("MainWindow", "RealTime"))
-        self.pushButton_2.setText(_translate("MainWindow", "Input available"))
-        self.pushButton_3.setText(_translate("MainWindow", "About"))
-        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
+        TrafficLightControl.setWindowTitle(_translate("TrafficLightControl", "MainWindow"))
+        self.label.setText(_translate("TrafficLightControl", "Traffic light control system in real time"))
+        self.label_2.setText(_translate("TrafficLightControl", "ITS-59"))
+        self.pushButton.setText(_translate("TrafficLightControl", "RealTime"))
+        self.pushButton_2.setText(_translate("TrafficLightControl", "Input available"))
+        self.pushButton_3.setText(_translate("TrafficLightControl", "About"))
+        self.toolBar.setWindowTitle(_translate("TrafficLightControl", "toolBar"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    TrafficLightControl = QtWidgets.QMainWindow()
+    ui = Ui_TrafficLightControl()
+    ui.setupUi(TrafficLightControl)
+    TrafficLightControl.show()
     sys.exit(app.exec_())
