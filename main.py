@@ -74,6 +74,7 @@ class Ui_TrafficLightControl(object):
         QtCore.QMetaObject.connectSlotsByName(TrafficLightControl)
         TrafficLightControl.setTabOrder(self.pushButton, self.pushButton_2)
         TrafficLightControl.setTabOrder(self.pushButton_2, self.pushButton_3)
+        self.pushButton.clicked.connect(self.Button)
 
     def retranslateUi(self, TrafficLightControl):
         _translate = QtCore.QCoreApplication.translate
@@ -81,9 +82,17 @@ class Ui_TrafficLightControl(object):
         self.label.setText(_translate("TrafficLightControl", "Traffic light control system in real time"))
         self.label_2.setText(_translate("TrafficLightControl", "ITS-59"))
         self.pushButton.setText(_translate("TrafficLightControl", "RealTime"))
-        self.pushButton_2.setText(_translate("TrafficLightControl", "Input available"))
+        self.pushButton_2.setText(_translate("TrafficLightControl", "Input available
+        
+        "))
         self.pushButton_3.setText(_translate("TrafficLightControl", "About"))
         self.toolBar.setWindowTitle(_translate("TrafficLightControl", "toolBar"))
+    
+        
+    def Button(self):
+        print("Xin chao")
+
+
 
 
 if __name__ == "__main__":
